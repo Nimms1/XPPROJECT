@@ -31,6 +31,7 @@
 			<td>${mobile.mobileManufactureDate}</td>
 			<td>${mobile.price}</td>
 			<td>${mobile.description}</td>
+			<td><input type="submit" value="Add To Buyer Kart"/></td>
 			</tr>
 		</c:forEach>
 	</table>
