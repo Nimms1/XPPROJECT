@@ -38,4 +38,8 @@ public class MobileServiceImpl implements MobileService{
 		return mobileList;
 	}
 
+	public List<OrderDto> getAllCartItems() {
+		List<OrderDto> mobileList= mobileDao.getAllMobiles();
+		return mobileList;
+	}
 }

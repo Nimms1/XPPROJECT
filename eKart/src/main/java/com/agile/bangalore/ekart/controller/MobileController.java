@@ -39,7 +39,7 @@ public class MobileController {
 		model.addAttribute("mobile", mobileDto);
 		return "mobileAdd";
 	}
-
+	
 	
 	@RequestMapping(value = { "/addMobile" }, method = RequestMethod.POST)
 	public String saveMobile( @ModelAttribute("mobile") MobileDto mobile, ModelMap model) {
@@ -49,11 +49,11 @@ public class MobileController {
 		return "success";
 	}
 	
-	@RequestMapping(value = { "/placeOrder" }, method = RequestMethod.GET)
-	public String placeOrder(ModelMap model) {
-		MobileDto mobileDto = new MobileDto();
-		model.addAttribute("mobile", mobileDto);
-		return "mobileAdd";
+	@RequestMapping(value = { "/viewCart" }, method = RequestMethod.GET)
+	public String viewCart(ModelMap model) {
+		List<MobileDto> orders = mobileService.getAllMobile();
+		model.addAttribute("orders", orders);
+		return "viewcart";
 	}
 
 }

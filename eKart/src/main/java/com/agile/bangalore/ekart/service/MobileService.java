@@ -11,5 +11,6 @@ public interface MobileService {
 	
 	
 	List<MobileDto> getAllMobile();
+	List<OrderDto> getAllCartItems();
 
 }
