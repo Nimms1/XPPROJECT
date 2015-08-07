@@ -48,5 +48,12 @@ public class MobileController {
 		model.addAttribute("success","Mobile added successfully");
 		return "success";
 	}
+	
+	@RequestMapping(value = { "/placeOrder" }, method = RequestMethod.GET)
+	public String placeOrder(ModelMap model) {
+		MobileDto mobileDto = new MobileDto();
+		model.addAttribute("mobile", mobileDto);
+		return "mobileAdd";
+	}
 
 }

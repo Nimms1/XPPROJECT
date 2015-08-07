@@ -37,6 +37,7 @@
 	</table>
 	<br/>
 	<a href="<c:url value='/addMobile' />">Add New Mobile</a>
+	<a href="<c:url value='/viewCart' />">View My Cart</a>
 	</div>
 	<div id="footer">
 	<table style="background-color:lightsteelblue;width:100%"><tr>
