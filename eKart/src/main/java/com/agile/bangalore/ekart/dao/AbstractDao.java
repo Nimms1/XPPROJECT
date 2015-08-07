@@ -9,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.agile.bangalore.ekart.entities.MobileDto;
 import com.agile.bangalore.ekart.entities.OrderDto;
 
 public abstract class AbstractDao<PK extends Serializable, T> {
@@ -32,8 +33,12 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 		return (T) getSession().get(persistentClass, key);
 	}
 
-	public void persist(OrderDto orderDto) {
-		getSession().persist(orderDto);
+	public void persist(MobileDto mobileDto) {
+		getSession().persist(mobileDto);
+	}
+	
+	public void persist(OrderDto mobileDto) {
+		getSession().persist(mobileDto);
 	}
 
 	public void delete(T entity) {

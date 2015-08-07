@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.agile.bangalore.ekart.dao.MobileDao;
+import com.agile.bangalore.ekart.dao.OrderDao;
 import com.agile.bangalore.ekart.entities.MobileDto;
+import com.agile.bangalore.ekart.entities.OrderDto;
 
 /**
  * @author Raghuraman.r
@@ -21,6 +23,7 @@ import com.agile.bangalore.ekart.entities.MobileDto;
 public class MobileServiceImpl implements MobileService{
 
 	private MobileDao mobileDao;
+	private OrderDao orderDao;
 	@Autowired
 	public MobileServiceImpl(MobileDao mobileDao)
 	{
@@ -39,7 +42,7 @@ public class MobileServiceImpl implements MobileService{
 	}
 
 	public List<OrderDto> getAllCartItems() {
-		List<OrderDto> mobileList= mobileDao.getAllMobiles();
+		List<OrderDto> mobileList= orderDao.getAllOrderDetails();
 		return mobileList;
 	}
 }
